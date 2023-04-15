@@ -5,11 +5,9 @@ import Calendar from "./components/Calendar/Calendar";
 
 function App() {
   return (
-    <div className="App">
-      <CalendarProvider>
-        <Calendar />
-      </CalendarProvider>
-    </div>
+    <CalendarProvider>
+      <Calendar />
+    </CalendarProvider>
   );
 }
 

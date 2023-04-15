@@ -15,7 +15,7 @@ const Day = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 15px;
+  font-size: 0.75rem;
   width: 14%;
   gap: 3px;
 `;
@@ -24,9 +24,9 @@ const DayCirle = styled.div<{ isToday: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
-  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
   background-color: ${(props) => (props.isToday ? "red" : "transparent")};
   color: ${(props) => (props.isToday ? "white" : "black")};
 `;

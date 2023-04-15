@@ -9,12 +9,11 @@ const Container = styled.div`
   padding: 10px 0px;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
 `;
 
 const Line = styled.span`
-  font-size: 25px;
+  font-size: 1.2rem;
 `;
 
 const Header = () => {
@@ -22,7 +21,7 @@ const Header = () => {
   return (
     <Container>
       <Line>Interview Calendar</Line>
-      <Button style={{ fontSize: "50px" }} onClick={() => addEvent()}>
+      <Button style={{ fontSize: "2rem" }} onClick={() => addEvent()}>
         +
       </Button>
     </Container>

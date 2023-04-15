@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 const Arrow = styled.button`
   color: red;
-  font-size: 30px;
+  font-size: 1.2rem;
   font-weight: 400;
   background-color: transparent;
   border: none;
@@ -18,7 +18,7 @@ const Arrow = styled.button`
 `;
 const Text = styled.div`
   font-weight: 400;
-  font-size: 25px;
+  font-size: 1rem;
 `;
 const Month = ({ date }: { date: string }) => {
   const { forwardCurrentDate, backCurrentDate } = useCalendarContext();

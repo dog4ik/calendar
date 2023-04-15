@@ -27,13 +27,13 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   overflow-x: hidden;
-  height: 50vh;
   gap: 2px;
 `;
 
 const SideTime = styled.div`
   display: flex;
   transform: translateY(50%);
+  font-size: 0.75rem;
   justify-content: center;
   color: gray;
   height: 50px;

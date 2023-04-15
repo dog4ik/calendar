@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  height: 100vh;
   @media (min-width: 740px) {
     max-width: 740px;
     width: 740px;
