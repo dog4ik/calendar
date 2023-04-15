@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { useCalendarContext } from "../../../CalendarContext";
 import Button from "../../ui/Button";
 
 const Container = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
+  padding: 10px 0px;
   justify-content: space-between;
-  alignitems: center;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 `;
@@ -16,10 +18,13 @@ const Line = styled.span`
 `;
 
 const Header = () => {
+  const { addEvent } = useCalendarContext();
   return (
     <Container>
-      <Line>Interview calendar</Line>
-      <Button>+</Button>
+      <Line>Interview Calendar</Line>
+      <Button style={{ fontSize: "50px" }} onClick={() => addEvent()}>
+        +
+      </Button>
     </Container>
   );
 };

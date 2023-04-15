@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { useCalendarContext } from "../../../CalendarContext";
 
 const Container = styled.div`
   width: 100%;
   display: flex;
-  justify-content: evenly;
-  align-tems: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
@@ -13,25 +14,33 @@ const Container = styled.div`
 const Day = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  width: 14%;
   gap: 3px;
 `;
-const DayCirle = styled.div`
+const DayCirle = styled.div<{ isToday: boolean }>`
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: green;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  background-color: ${(props) => (props.isToday ? "red" : "transparent")};
+  color: ${(props) => (props.isToday ? "white" : "black")};
 `;
-const Days = () => {
-  const days = ["M", "T", "W", "F", "S", "S"];
+const Days = ({ dates }: { dates: { date: number; fullDate: string }[] }) => {
+  const days = ["M", "T", "W", "T", "F", "S", "S"];
+  let currentDate = new Date().toDateString();
   return (
     <Container>
-      {days.map((day) => (
-        <Day>
+      {days.map((day, i) => (
+        <Day key={i}>
           <span>{day}</span>
-          <DayCirle>{29}</DayCirle>
+          <DayCirle isToday={currentDate == dates[i].fullDate}>
+            {dates[i].date}
+          </DayCirle>
         </Day>
       ))}
     </Container>

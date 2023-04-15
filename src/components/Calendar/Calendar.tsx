@@ -1,17 +1,23 @@
-import React from "react";
-import styled from "styled-components";
+import { useCalendarContext } from "../../CalendarContext";
 import Body from "./misc/Body";
-import Days from "./misc/Days";
 import Footer from "./misc/Footer";
+import Date from "./misc/Date";
 import Header from "./misc/Header";
 import Wrapper from "./misc/Wrapper";
 
 const Calendar = () => {
+  const { goToToday, selectedEvent, removeEvent } = useCalendarContext();
+
   return (
     <Wrapper>
       <Header />
+      <Date />
       <Body />
-      <Footer isSelected={true} onToday={() => null} onDelete={() => null} />
+      <Footer
+        isSelected={!!selectedEvent}
+        onToday={goToToday}
+        onDelete={removeEvent}
+      />
     </Wrapper>
   );
 };

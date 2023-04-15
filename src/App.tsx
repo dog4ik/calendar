@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./App.css";
+import CalendarProvider from "./CalendarContext";
 import Calendar from "./components/Calendar/Calendar";
 
 function App() {
   return (
     <div className="App">
-      <Calendar />
+      <CalendarProvider>
+        <Calendar />
+      </CalendarProvider>
     </div>
   );
 }
