@@ -38,7 +38,7 @@ const SideTime = styled.div`
   flex-shrink: 0;
   align-items: center;
 `;
-const Day = styled.button<DayProps>`
+const Day = styled.div<DayProps>`
   borderradius: 2px;
   background-color: ${(props) =>
     props.haveEvent ? (props.isSelected ? "lightblue" : "lavender") : "white"};
@@ -83,6 +83,7 @@ const Body = () => {
               );
               return (
                 <Day
+                  tabIndex={0}
                   key={j}
                   isSelected={event ? event.id == selectedEvent : false}
                   onClick={() => (event ? selectEvent(event.id) : null)}
