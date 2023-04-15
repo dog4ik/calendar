@@ -11,7 +11,6 @@ const Grid = styled.div`
   height: fit-content;
   flex: 1;
   display: flex;
-  justify-content: space-between;
   background-color: lightgray;
   gap: 2px;
 `;
@@ -25,7 +24,6 @@ const GridCol = styled.div`
 const Container = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
   overflow-x: hidden;
   gap: 2px;
 `;
