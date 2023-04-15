@@ -71,7 +71,7 @@ const Body = () => {
   });
   return (
     <Container>
-      <GridCol>
+      <GridCol style={{ backgroundColor: "white" }}>
         {[...Array(23)].map((_, i) => (
           <SideTime key={i}>{`${i + 1}:00`}</SideTime>
         ))}

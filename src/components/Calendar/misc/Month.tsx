@@ -18,6 +18,7 @@ const Arrow = styled.button`
 `;
 const Text = styled.div`
   font-weight: 400;
+  color: black;
   font-size: 1rem;
 `;
 const Month = ({ date }: { date: string }) => {
